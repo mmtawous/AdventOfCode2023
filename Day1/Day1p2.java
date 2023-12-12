@@ -2,7 +2,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Scanner;
 
-public class Solve2 {
+public class Day1p2 {
     static String[] dictA = { "1", "2", "3", "4", "5", "6", "7", "8", "9" };
     static String[] dictB = { "one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "1", "2", "3",
             "4",

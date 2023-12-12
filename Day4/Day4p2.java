@@ -1,21 +1,22 @@
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Scanner;
 
-public class Solve {
+public class Day4p2 {
 
-    public static void main(String[] args) throws FileNotFoundException {
+    public static void main(String[] args) {
 
         Scanner scnr = new Scanner(System.in);
         int sum = 0;
+
+        int cardNum = 1;
+        HashMap<Integer, Integer> copies = new HashMap<Integer, Integer>();
 
         while (scnr.hasNextLine()) {
             String line = scnr.nextLine();
             line = line.split(":")[1];
             String[] data = line.split("\\|");
-            
+
             Scanner winning = new Scanner(data[0]);
             Scanner nums = new Scanner(data[1]);
 
@@ -39,16 +40,37 @@ public class Solve {
 
             }
 
+            winning.close();
+            nums.close();
+
             int cnt = 0;
             for (Integer i : numSet) {
                 if (winningSet.contains(i))
                     cnt++;
             }
 
-            if (cnt > 0)
-                sum += Math.pow(2, cnt - 1);
+            int copiesOfCurr = copies.get(cardNum) == null ? 1 : copies.get(cardNum) + 1;
 
+            for (int i = 1; i <= cnt; i++) {
+
+                if (copies.get(cardNum + i) == null) {
+                    copies.put(cardNum + i, copiesOfCurr);
+                } else {
+                    copies.put(cardNum + i, copies.get(cardNum + i) + copiesOfCurr);
+                }
+
+            }
+
+            System.out.println(copies.toString());
+            cardNum++;
         }
+
+        for (Integer i : copies.values()) {
+            if (i != null)
+                sum += i;
+        }
+
+        sum += cardNum;
 
         System.out.println("Answer is: " + sum);
 

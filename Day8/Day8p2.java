@@ -5,7 +5,7 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Scanner;
 
-public class Solve2 {
+public class Day8p2 {
 
     public static void main(String[] args) {
 

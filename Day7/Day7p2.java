@@ -6,7 +6,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Scanner;
 
-public class Solve2 {
+public class Day7p2 {
 
     public static void main(String[] args) {
 

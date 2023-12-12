@@ -1,11 +1,10 @@
-import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-public class Solve {
+public class Day5p1 {
 
-    public static void main(String[] args) throws FileNotFoundException {
+    public static void main(String[] args) {
 
         Scanner scnr = new Scanner(System.in);
 

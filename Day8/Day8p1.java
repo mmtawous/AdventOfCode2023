@@ -1,7 +1,7 @@
 import java.util.HashMap;
 import java.util.Scanner;
 
-public class Solve {
+public class Day8p1 {
 
     public static void main(String[] args) {
 

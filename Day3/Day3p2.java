@@ -5,7 +5,7 @@ import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Scanner;
 
-public class Solve2 {
+public class Day3p2 {
 
     public static final int SIZE = 140;
 

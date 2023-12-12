@@ -1,16 +1,12 @@
-import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Scanner;
 
-public class Solve2 {
+public class Day4p1 {
 
     public static void main(String[] args) {
 
         Scanner scnr = new Scanner(System.in);
         int sum = 0;
-
-        int cardNum = 1;
-        HashMap<Integer, Integer> copies = new HashMap<Integer, Integer>();
 
         while (scnr.hasNextLine()) {
             String line = scnr.nextLine();
@@ -40,8 +36,8 @@ public class Solve2 {
 
             }
 
-            winning.close();
             nums.close();
+            winning.close();
 
             int cnt = 0;
             for (Integer i : numSet) {
@@ -49,28 +45,10 @@ public class Solve2 {
                     cnt++;
             }
 
-            int copiesOfCurr = copies.get(cardNum) == null ? 1 : copies.get(cardNum) + 1;
+            if (cnt > 0)
+                sum += Math.pow(2, cnt - 1);
 
-            for (int i = 1; i <= cnt; i++) {
-
-                if (copies.get(cardNum + i) == null) {
-                    copies.put(cardNum + i, copiesOfCurr);
-                } else {
-                    copies.put(cardNum + i, copies.get(cardNum + i) + copiesOfCurr);
-                }
-
-            }
-
-            System.out.println(copies.toString());
-            cardNum++;
         }
-
-        for (Integer i : copies.values()) {
-            if (i != null)
-                sum += i;
-        }
-
-        sum += cardNum;
 
         System.out.println("Answer is: " + sum);
 

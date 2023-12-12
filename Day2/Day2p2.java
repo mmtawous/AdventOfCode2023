@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Solve2 {
+public class Day2p2 {
     public static void main(String[] args) {
         Scanner scnr = new Scanner(System.in);
         long sum = 0;

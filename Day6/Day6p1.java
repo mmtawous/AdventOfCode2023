@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Solve {
+public class Day6p1 {
 
     public static void main(String[] args) {
 

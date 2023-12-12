@@ -2,7 +2,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-public class Solve2 {
+public class Day9p1 {
 
     public static void main(String[] args) {
 
@@ -29,7 +29,7 @@ public class Solve2 {
                     temp.set(i, temp.get(i + 1) - temp.get(i));
                 }
                 temp.remove(temp.size() - 1);
-                ends.add(temp.get(0));
+                ends.add(temp.get(temp.size() - 1));
 
                 finished = true;
                 for (int i = 0; i < temp.size(); i++) {
@@ -42,10 +42,10 @@ public class Solve2 {
 
             int accum = ends.get(ends.size() - 2);
             for (int i = ends.size() - 3; i >= 0; i--) {
-                accum = ends.get(i) - accum;
+                accum += ends.get(i);
             }
 
-            sum += nums.get(0) - accum;
+            sum += accum + nums.get(nums.size() - 1);
         }
        
 

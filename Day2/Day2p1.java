@@ -2,7 +2,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Scanner;
 
-public class Solve {
+public class Day2p1 {
     public static void main(String[] args) {
         Scanner scnr = new Scanner(System.in);
         Map<String, Integer> maxVals = new HashMap<String, Integer>();

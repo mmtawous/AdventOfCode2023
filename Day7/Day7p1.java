@@ -7,7 +7,7 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Scanner;
 
-public class Solve {
+public class Day7p1 {
 
     public static void main(String[] args) {
 
